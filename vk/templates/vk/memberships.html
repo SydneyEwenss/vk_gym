@@ -1,0 +1,26 @@
+{% extends "vk/base.html" %}
+{% load static %}
+{% block styles %}<link rel="stylesheet" href="{% static 'vk/styles/memberships.css' %}">{% endblock %}
+{% block content %}
+    <div class='fixed'></div>
+    <div class="container">
+        <h1>Membership Price List</h1>
+
+        <h2>FULL MEMBERSHIP</h2>
+        <p><p class="cost">£7.00</p>Daily Pass</p>
+        <p><p class="cost">£27.00</p>Weekly Pass</p>
+        <p><p class="cost">£47.00</p>Monthly Pass</p>
+        <p><p class="cost">£35.00</p>Monthly Pass (12 month contract)</p>
+        <p><p class="cost">£327.00</p>Yearly Pass</p>
+        <br>
+        <h2>STUDENT MEMBERSHIP</h2>
+        <p><p class="cost">£5.00</p>Daily Pass</p>
+        <p><p class="cost">£15.00</p>Weekly Pass</p>
+        <p><p class="cost">£27.00</p>Monthly Pass</p>
+        <p><p class="cost">£20.00</p>Monthly Pass (12 month contract)</p>
+        <br>
+        <h2>COUPLES MEMBERSHIP</h2>
+        <p><p class="cost">£56.00</p>Monthly Pass (12 month contract)</p>
+        <p><p class="cost">£537.00</p>Yearly Pass</p>
+    </div>
+{% endblock content %}

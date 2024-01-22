@@ -1,0 +1,10 @@
+{% extends "vk/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block styles %}<link rel="stylesheet" href="{% static 'users/styles/register.css' %}">{% endblock %}
+{% block content %}
+    <h2>logged out</h2>
+    <div class="border-top pt-3">
+        <small>Want to log back in? <a href="/login">Sign In</a></small>
+    </div>
+{% endblock content %}

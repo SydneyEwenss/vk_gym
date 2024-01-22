@@ -1,0 +1,111 @@
+.fixed{
+    position:fixed;
+    margin-left: -180px;
+    margin-top: -100px;
+    z-index: -1;
+    width:120%;
+    height:100%;
+    background-image: url(../imgs/classes.jpg);
+    background-repeat: repeat-x; 
+    background-size: 100% auto;
+}
+
+.container {
+    background-color: white;
+    margin-top: 30%;
+    text-align: center;
+    min-width: 100%;
+    padding: 50px 15%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2 {
+    color: #e6007d;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+h3 {
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-weight: bold;
+    font-size: medium;
+    color: #b8b8b8;
+    margin-bottom: 50px;
+}
+
+.classes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.class {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 50px;
+}
+
+.infoButton {
+    background-color: #fff;
+    width: 80%;
+    color: black;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    outline: #e6007d solid 3px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.infoButton:hover {
+    background-color: #e6007d;
+    color: #fff;
+}
+
+.bookButton {
+    background-color: #fff;
+    width: 200px;
+    color: black;
+    height: 80px;
+    text-align: center;
+    text-decoration: none;
+    outline: #e6007d solid 3px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    line-height: 40px;
+    padding: 15px 40px;
+}
+
+.bookButton:hover {
+    background-color: #e6007d;
+    color: #fff;
+}
+
+@media screen and (min-width: 960px) {
+    .fixed {
+        height: 100%;
+        width: 150%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .fixed {
+        height: 100%;
+        width: 150%;
+    }
+
+    .container {
+        margin: 40% 0 0 0;
+    }
+}

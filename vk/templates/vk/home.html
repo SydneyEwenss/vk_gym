@@ -1,0 +1,41 @@
+{% extends "vk/base.html" %}
+{% load static %}
+{% block styles %}<link rel="stylesheet" href="{% static 'vk/styles/home.css' %}">{% endblock %}
+{% block content %}
+    <div class='fixed'></div>
+    <div class="container">
+        <h1 class="tagline grey">There’s everything you need to achieve</h1>
+        <h1 class="tagline">your health and fitness goals at VK Gym</h1>
+        <p class="paragraph">
+            At VK Gym we offer a welcoming and supportive environment in a friendly, family-run space
+            Work out in our fully equipped gym then relax in the comfortable lounge area with a well-earned coffee
+        </p>
+        <img src="{% static 'vk/imgs/seperator.jpg' %}" class="seperator">
+        <p class="paragraph">
+            Here at VK Gym our aim is to help you reach your health and fitness goals by working with you – all the way!
+        </p>
+
+        <div class="boxes">
+            <ul>
+                <img src="{% static 'vk/imgs/box1.jpg' %}">
+                <img src="{% static 'vk/imgs/box2.jpg' %}">
+                <img src="{% static 'vk/imgs/box3.jpg' %}">
+            </ul>
+        </div>
+
+        <p class="paragraph-big">Are you concerned about your health and fitness?</p>
+        <p class="paragraph-big">Has that made you decide to get in shape this year?</p>
+        <p class="paragraph">If so, VK Gym is the place for you.</p>
+        <p class="paragraph">Why? Well, we’re very aware of those old jokes about joining a gym, paying every month, then never going. That doesn’t happen so much with our clients. And that’s not only because it’s a great place to come and work out – we have a genuine interest in how you’re doing. We’re not a corporate machine that’s only interested in your money and doesn’t care if you actually turn up or not.</p>
+        <p class="paragraph-big">In fact our range of <a href="/memberships" class="link">membership</a> options keeps you in complete control.</p>
+    
+        <img src="{% static 'vk/imgs/seperator.jpg' %}" class="seperator">
+
+        <img src="{% static 'vk/imgs/week.png' %}" class="pass">
+        <p class="paragraph-big">Call us now on 01243 862279 or pop in to chat about your goals,
+            and claim a FREE ONE WEEK PASS,
+            so you can try us out at no cost – no obligation.</p>
+    
+    </div>
+
+{% endblock content %}

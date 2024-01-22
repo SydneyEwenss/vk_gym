@@ -1,0 +1,65 @@
+{% extends "vk/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block styles %}<link rel="stylesheet" href="{% static 'vk/styles/contact.css' %}">{% endblock %}
+{% block content %}
+    <div class='fixed'></div>
+    <div class="container">
+        <h1>Get in touch!</h1>
+
+        <div class="main-wrapper">
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="">Full Name</label>
+                        <input type="" class="form-control" placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                      <label for="">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="johndoe@example.com">
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="">Subject</label>
+                      <input type="" class="form-control" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                      <label for="">Message</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+            </div>
+            <div class="information">
+                <div class="info-wrapper">
+                    <h3>ADDRESS</h3>
+                    <p>Unit 8,South Bersted Industrial Estate,
+                        Bognor Regis, West Sussex PO22 9QT</p>
+                </div>
+                <div class="info-wrapper">
+                    <h3>PHONE</h3>
+                    <p>+44 (0)1243 862279</p>
+                    <p>+44 (0)7595 484609</p>
+                </div>
+                <div class="info-wrapper">
+                    <h3>OPENING HOURS</h3>
+                    <p>Monday: 6am – 9pm</p>
+                    <p>Tuesday: 6am – 9pm</p>
+                    <p>Wednesday: 6am – 9pm</p>
+                    <p>Thursday: 6am – 9pm</p>
+                    <p>Friday: 6am – 8pm</p>
+                    <p>Saturday: 7.15am – 12pm</p>
+                    <p>Sunday: 7.15am – 12pm</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="map-wrapper">
+            <h3>HOW TO FIND US</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.655936012754!2d-0.6736577236717511!3d50.79807527773989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4875ac4b8a4f60e5%3A0x71383d956bac815c!2sVK%20GYM!5e0!3m2!1sen!2suk!4v1705832180187!5m2!1sen!2suk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,41 @@
+{% extends "vk/base.html" %}
+{% load static %}
+{% block styles %}<link rel="stylesheet" href="{% static 'vk/styles/classes.css' %}">{% endblock %}
+{% block content %}
+    <div class='fixed'></div>
+    <div class="container">
+        <h1>Join a class at VK Gym</h1>
+
+        <h3>Our new studio is open – newly-equipped and with a top-of-the-range sound and light system. It’s the perfect inspiring, energising space for our range of health and fitness classes.</h2>
+    
+        <h4>Here is what we have lined up for you:</h3>
+
+        <div class="classes">
+            <div class="class">
+                <h2>Yoga</h2>
+                <p>If gentle, thoughtful exercise is for you this relaxing class stretches mind and body. Suitable whether you are a beginner or more experienced.</p>
+                <a href="#" class="infoButton">FIND OUT MORE</a>
+            </div>
+            <div class="class">
+                <h2>Spinning</h2>
+                <p>The ultimate cycling fitness workout. Suitable for all levels of fitness as you can control the intensity of the effort you need to put it.</p>
+                <a href="#" class="infoButton">FIND OUT MORE</a>
+            </div>
+            <div class="class">
+                <h2>FFT</h2>
+                <p>Functional Fitness Training does what it says on the tin – it gets you fit for life with a body functions easily and effortlessly.</p>
+                <a href="#" class="infoButton">FIND OUT MORE</a>
+            </div>
+        </div>
+
+        <img src="{% static 'vk/imgs/seperator.jpg' %}" class="seperator">
+
+        <div class="book">
+            <h1>Want to join a class?</h1>
+            <a href="booking" class="bookButton">BOOK A CLASS</a>
+        </div>
+        
+    
+    </div>
+
+{% endblock content %}

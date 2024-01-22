@@ -1,0 +1,11 @@
+{% extends "vk/base.html" %}
+{% load static %}
+{% block styles %}<link rel="stylesheet" href="{% static 'vk/styles/booking.css' %}">{% endblock %}
+{% block content %}
+    <h1>Book</h1>
+
+    {%for classBooked in classes%}
+        <h2>{{classBooked}}</h2>
+    {%endfor%}
+
+{% endblock content %}

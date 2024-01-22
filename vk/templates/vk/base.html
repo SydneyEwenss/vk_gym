@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'vk/styles/main.css' %}">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    {% block styles %}{% endblock %}
+    {% if title %}
+        <title>VK Gym - {{ title }}</title>
+    {% else %}
+        <title>VK Gym</title>
+    {% endif %}
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar_container">
+            <img src="{% static 'vk/imgs/logo.png' %}" alt="VK Gym Logo" id="navbar_logo">
+            <div class="navbar_toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar_menu">
+                <li class="navbar_item">
+                    <a href="/" class="navbar_links">Home</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="/memberships" class="navbar_links">Memberships</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="/classes" class="navbar_links">Classes</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="/contact" class="navbar_links">Contact</a>
+                </li>
+                {% if user.is_authenticated %}
+                <li class="navbar_item">
+                    <a href="/dashboard" class="navbar_links">Dashboard</a>
+                </li>
+                {% else %}
+                <li class="navbar_item">
+                    <a href="/register" class="navbar_links">Register</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="/login" class="navbar_links">Log In</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <footer>
+        <p>© 2024 VK Gym. All Rights Reserved. Website Design by Sydney Ewens.</p>
+        <div class="socials_wrapper">
+            <div class="socials"><a href="https://twitter.com/VK_Gym"><img src="{% static 'vk/imgs/x_logo.png' %}" alt=""></a></div>
+            <div class="socials"><a href="https://www.facebook.com/vk.gym"><img src="{% static 'vk/imgs/facebook_logo.png' %}" alt=""></a></div>
+            <div class="socials"><a href="https://www.instagram.com/vkgymfitness/"><img src="{% static 'vk/imgs/instagram_logo.png' %}" alt=""></a></div>
+        </div>
+        
+        
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="{% static 'vk/scripts/main.js' %}"></script>
+</body>
+</html>
